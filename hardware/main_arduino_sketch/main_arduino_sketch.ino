@@ -16,7 +16,7 @@ void loop()
 {
   int temperature = dht11.readTemperature();
   int humidity = dht11.readHumidity();
-  String str =String(humidity)+String(" ")+String(temperature)+String(" ")+String(analogRead(A0));
+  String str =String(temperature)+String(" ")+String(humidity)+String(" ")+String(analogRead(A0));
   espSerial.println(str);
   delay(1000);
 }
