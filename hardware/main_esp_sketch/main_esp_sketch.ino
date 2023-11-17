@@ -5,7 +5,7 @@
 const char* ssid = "Qqqqqqq";
 const char* password = "parolatelefon";
 
-String serverName = "http://192.168.190.3:3001/api/sendData";
+String serverName = "http://192.168.190.3:3002/api/sendData";
 
 unsigned long lastTime = 0;
 unsigned long timerDelay = 5000;
@@ -51,7 +51,8 @@ void loop() {
       HTTPClient http;
 
       String serverPath = serverName 
-            +String("?temperature=")+String(temperature)
+            +String("?zone=1")  
+            +String("&temperature=")+String(temperature)
             +String("&humidity=")+String(humidity)
             +String("&emission=")+String(emission);
       // Your Domain name with URL path or IP address with path
